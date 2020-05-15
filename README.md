@@ -5,4 +5,5 @@ Contains the compulsory part.
 
 # Compulsory  
 
-Everything is implemented.
+Everything is implemented.  
+![alt text](https://github.com/MasterBowler/PAlab12/blob/master/Designer.jpg "Designer")
