@@ -23,19 +23,19 @@ public class ControlPanel extends JPanel {
     public ControlPanel(DesignPanel designPanel) {
         this.designPanel = designPanel;
 
-        componentName = new JTextField("Enter component",30);
-        componentText = new JTextField("component text",30);
-        this.add(componentName,BorderLayout.WEST);
-        this.add(componentText,BorderLayout.CENTER);
+        componentName = new JTextField("Enter component", 30);
+        componentText = new JTextField("component text", 30);
+        this.add(componentName, BorderLayout.WEST);
+        this.add(componentText, BorderLayout.CENTER);
 
         button = new JButton("Create & Add");
-        this.add(button,BorderLayout.EAST);
+        this.add(button, BorderLayout.EAST);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     Class component = Class.forName(componentName.getText());
-                    Class[] signature = new Class[] {String.class};
+                    Class[] signature = new Class[]{String.class};
                     Constructor constructor = component.getConstructor(signature);
                     Component instance = (Component) constructor.newInstance(componentText.getText());
                     designPanel.add(instance);

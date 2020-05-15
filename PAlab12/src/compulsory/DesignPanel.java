@@ -8,6 +8,6 @@ import java.awt.*;
  */
 public class DesignPanel extends JPanel {
     public DesignPanel() {
-        setPreferredSize(new Dimension(800,600));
+        setPreferredSize(new Dimension(800, 600));
     }
 }
